@@ -1,10 +1,3 @@
-// http://maps.googleapis.com/maps/api/directions/json?origin=Toronto&destination=Montreal&sensor=false
-<<<<<<< HEAD
-// window.onload = Map.init;
-=======
-// window.onload = initMap;
->>>>>>> d0efd98579836c2fd936c4dab2219c0527425476
-
 function Map(){
 	this.directionService = new google.maps.DirectionsService();
 }
