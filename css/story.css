@@ -1,0 +1,22 @@
+.story {
+    max-height: 70%;
+}
+
+.story .carousel-image {
+    max-height: 70%;
+}
+
+.story .carousel-image img {
+    height: 100%;
+}
+
+.story .carousel-subhead {
+    color: #999;
+    font-weight: 300;
+    line-height: 1.4em;
+    max-height: 70%;
+}
+
+#timeline-canvas {
+    width: 100%;
+}

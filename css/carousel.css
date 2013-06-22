@@ -1,0 +1,45 @@
+.carousel .carousel-image-scroller {
+    position: relative;
+    width:3500px;/*should be num of images * image_width*/
+}
+
+.carousel .carousel-image-container {
+    width:700px;
+    height:500px;
+    overflow: hidden;
+}
+
+.carousel {
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:700px;
+    height:600px;
+    margin-top:-210px;
+    margin-left:-350px;
+}
+
+.carousel .carousel-nav-container {
+    position:absolute;
+    left:34%;
+}
+
+.carousel .carousel-image-list li{
+    display: inline-block;
+}
+
+.carousel .carousel-image-list img{
+    list-style-type:none;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    height: 500px; /* height of the image */
+    width: 700px; /* width of the image */
+    float:right;
+}
+
+.carousel .carousel-nav-list li{
+    display:inline-block;
+    margin:10px 10px;
+    float:left;
+    /*margin-left:10px;*/
+}
