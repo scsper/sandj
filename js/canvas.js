@@ -16,7 +16,7 @@ Canvas.prototype = {
     resize: function() {
         this.canvas = document.getElementById(this.selector);
         this.canvas.width = document.getElementsByClassName("main")[0].offsetWidth;
-        this.canvas.height = window.innerHeight - document.getElementsByClassName("main")[0].offsetHeight - document.getElementsByClassName("pure-menu")[0].offsetHeight;
+        this.canvas.height = document.getElementsByTagName("body")[0].offsetHeight - document.getElementsByClassName("main")[0].offsetHeight;
 
         this.draw();
     },
