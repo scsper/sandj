@@ -1,5 +1,5 @@
 // http://maps.googleapis.com/maps/api/directions/json?origin=Toronto&destination=Montreal&sensor=false
-window.onload = initMap;
+// window.onload = initMap;
 
 function initMap(){
 	var mapOptions = {
