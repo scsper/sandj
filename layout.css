@@ -1,0 +1,23 @@
+.header .pure-menu {
+    padding: .5em;
+}
+
+.1-box {
+    padding: 1em;
+}
+
+.splash {
+    margin: 2em auto 0;
+    padding: 3em .5em;
+    background: #eee;
+}
+
+.splash .splash-image {
+    padding: 1em;
+}
+
+.splash .splash-subhead {
+    color: #999;
+    font-weight: 300;
+    line-height: 1.4em;
+}
