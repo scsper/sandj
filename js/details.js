@@ -27,23 +27,15 @@ Map.prototype = {
 		this.directionService.route(request, function(result, status){
 			if (status == google.maps.DirectionsStatus.OK) {
      			directionsDisplay.setDirections(result);
+     			console.log(result.routes[0].legs[0].duration);
      			return false;
     		}
 		});
 	}
 }
-// function initForm(){
-// 	document.getElementById("submit").addEventListener("click", function() {
-// 		m.calcRoute(document.forms["direction-form"]["origin"].value);
-// 	});
-// }
+
 function calcRoute(e){
-	//m.calcRoute("Delano");
-	//e.preventDefault();
-	//return false;
 	m.calcRoute(document.forms["direction-form"]["origin"].value);
-	//m.calcRoute(document.forms["direction-form"]["origin"].value);
 }
 
-//google.maps.event.addDomListener(window, 'load', initMap);
 
