@@ -7,9 +7,9 @@
 	    <link rel="stylesheet" href="css/details.css">
 	</head>
 	<body>
-    <form name="direction-form" onsubmit="calcRoute" method="get">
+    <form name="direction-form" onsubmit= "calcRoute(); return false;" method="get">
       Start From: <input type = "text" name="origin">
-      <input type="submit" value="Get Directions">
+      <input type="submit" value ="Get Directions">
     </form>
 		<div id="map-canvas"></div>
 	</body>

@@ -32,10 +32,16 @@ Map.prototype = {
 		});
 	}
 }
+// function initForm(){
+// 	document.getElementById("submit").addEventListener("click", function() {
+// 		m.calcRoute(document.forms["direction-form"]["origin"].value);
+// 	});
+// }
 function calcRoute(e){
 	//m.calcRoute("Delano");
-	e.preventDefault();
-	return false;
+	//e.preventDefault();
+	//return false;
+	m.calcRoute(document.forms["direction-form"]["origin"].value);
 	//m.calcRoute(document.forms["direction-form"]["origin"].value);
 }
 
