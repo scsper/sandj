@@ -15,8 +15,8 @@ Map.prototype = {
 		this.directionsDisplay = new google.maps.DirectionsRenderer();
 		this.directionsDisplay.setMap(this.map);
 	},
-	calcRoute : function(){
-		var start = "Orange County";
+	calcRoute : function(origin1){
+		var start = origin1;
 		var end ="Bakersfield";
 		var request = {
 			origin: start,
@@ -27,9 +27,16 @@ Map.prototype = {
 		this.directionService.route(request, function(result, status){
 			if (status == google.maps.DirectionsStatus.OK) {
      			directionsDisplay.setDirections(result);
+     			return false;
     		}
 		});
 	}
+}
+function calcRoute(e){
+	//m.calcRoute("Delano");
+	e.preventDefault();
+	return false;
+	//m.calcRoute(document.forms["direction-form"]["origin"].value);
 }
 
 //google.maps.event.addDomListener(window, 'load', initMap);

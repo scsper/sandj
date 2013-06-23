@@ -7,6 +7,10 @@
 	    <link rel="stylesheet" href="css/details.css">
 	</head>
 	<body>
+    <form name="direction-form" onsubmit="calcRoute" method="get">
+      Start From: <input type = "text" name="origin">
+      <input type="submit" value="Get Directions">
+    </form>
 		<div id="map-canvas"></div>
 	</body>
       <script type="text/javascript"
@@ -18,6 +22,6 @@
      	var m = new Map();
         m.init();
         m.initDirector();
-        m.calcRoute();
+        m.calcRoute("Orange County");
     </script>
 </html>
