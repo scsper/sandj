@@ -7,11 +7,40 @@
 	    <link rel="stylesheet" href="css/details.css">
 	</head>
 	<body>
-    <form name="direction-form" onsubmit= "calcRoute(); return false;" method="get">
-      Start From: <input type = "text" name="origin">
-      <input type="submit" value ="Get Directions">
-    </form>
-		<div id="map-canvas"></div>
+     <div class="content pure-g-r">
+            <div class="header pure-u-1">
+                <div class="pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
+                    <a href="#" class="pure-menu-heading">SCOTT AND JESS</a>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Story</a></li>
+                        <li><a href="#">Details</a></li>
+                        <li><a href="#">RSVP</a></li>
+                    </ul>
+                </div>
+            </div>
+    <div class="when pure-u-1">
+        <p class="section"> When </p>
+        <p>Dragee I love candy ice cream wypas. Toffee marshmallow wafer faworki carrot cake tart. I love pie donut I love biscuit tiramisu jelly-o chocolate sweet roll. Jelly gingerbread pie applicake caramels candy I love.</p>
+    </div>
+    <div class="how pure-u-1">
+        <p class="section"> How </p>
+        <p>Gummies croissant donut caramels I love cookie macaroon powder. I love halvah jelly beans jelly. Powder tootsie roll dessert I love. Cupcake cake jelly beans cupcake.</p>
+    </div>  
+    <div class="where main pure-u-1">
+      <p class="section"> Where </p>
+      <form class ="pure-form pure-u-1-3" name="direction-form" onsubmit= "calcRoute(); return false;" method="get">
+        <label for="origin">Start From:</label>
+         <input id="origin pure-input-1" type = "text" name="origin" placeholder="Origin">
+        <input class=" submit pure-button" type="submit" value ="Get Directions">
+      </form>
+  		<div id="map-canvas" class="pure-u-2-3"></div>
+    </div>
+    </div>
+    <div class="gifts pure-u-1">
+        <p class="section"> Gifts </p>
+        <p>I love jelly beans pie unerdwear sweet croissant nerdies bonbon. Dessert gingerbread candy. Danish wafer faworki donut icing apple pie bear claw jujubes. Chocolate cake macaroon cookie jelly-o candy canes chocolate cake unerdwear toffee apple pie.</p>
+    </div>  
 	</body>
       <script type="text/javascript"
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLcdQOs-z8LYwdL5oGxsWZuSv3sXBtDQg&sensor=false">
@@ -22,6 +51,5 @@
      	var m = new Map();
         m.init();
         m.initDirector();
-       // m.calcRoute("Orange County");
     </script>
 </html>

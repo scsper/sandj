@@ -15,5 +15,23 @@ body {
 	width: 500px;
 }
 
+form {
+	margin: auto .5em;
+    padding: .5em;
+}
+input.submit, .when{
+	margin: .5em 0;
+	padding: .5em;
+}
+
+.when {
+	margin:3em .5em .5em .5em;
+	padding: .5em;
+}
+ .where, .how, .gifts{
+	margin:1em .5em .5em .5em;
+	padding: .5em;
+}
+
 </style>
 
