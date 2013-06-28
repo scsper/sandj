@@ -1,5 +1,6 @@
 function Canvas(selector) {
     this.selector = selector;
+    this.circleCoords = [];
 }
 
 Canvas.prototype = {
@@ -9,8 +10,12 @@ Canvas.prototype = {
     },
 
     bind: function() {
+        var canvas = document.getElementById(this.selector);
+
         // resize the canvas to fill browser window dynamically
         window.addEventListener('resize', this.resize.bind(this), false);
+
+        canvas.addEventListener('click', this.handleClick.bind(this), false);
     },
 
     resize: function() {
@@ -19,6 +24,16 @@ Canvas.prototype = {
         this.canvas.height = document.getElementsByTagName("body")[0].offsetHeight - document.getElementsByClassName("main")[0].offsetHeight;
 
         this.draw();
+    },
+
+    handleClick: function(e) {
+        var mouseX = e.layerX, mouseY = e.layerY, circleClickedIdx;
+
+        circleClickedIdx = Timeline.getCircle(this.circleCoords, mouseX, mouseY);
+
+        if(circleClickedIdx != -1) {
+            console.log("circle was clicked");
+        }
     },
 
     draw: function() {
@@ -46,5 +61,7 @@ Canvas.prototype = {
         ctx.fill();
         ctx.stroke();
 
+        this.circleCoords.push({x: x, y: y, radius: radius});
+        console.log(this.circleCoords);
     }
 };

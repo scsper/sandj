@@ -26,6 +26,8 @@ Map.prototype = {
 		var directionsDisplay = this.directionsDisplay;
 		this.directionService.route(request, function(result, status){
 			if (status == google.maps.DirectionsStatus.OK) {
+				document.getElementById("map-canvas").style.width = "500px";
+				document.getElementById("map-canvas").style.height = "500px";
      			directionsDisplay.setDirections(result);
      			console.log(result.routes[0].legs[0].duration);
      			return false;
