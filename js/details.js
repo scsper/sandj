@@ -4,8 +4,8 @@ function Map(){
 Map.prototype = {
 	init: function (){
 		var mapOptions = {
-	        center: new google.maps.LatLng(-34.397, 150.644),
-	        zoom: 8,
+	        center: new google.maps.LatLng(33.8, -117.9),
+	        zoom: 10,
 	        mapTypeId: google.maps.MapTypeId.ROADMAP
 	    };
 	    this.map = new google.maps.Map(document.getElementById("map-canvas"),
@@ -17,7 +17,7 @@ Map.prototype = {
 	},
 	calcRoute : function(origin1){
 		var start = origin1;
-		var end ="Bakersfield";
+		var end = "Westminster, CA";
 		var request = {
 			origin: start,
 			destination: end,
