@@ -15,6 +15,7 @@ Canvas.prototype = {
         // resize the canvas to fill browser window dynamically
         window.addEventListener('resize', this.resize.bind(this), false);
 
+        // detect whether you have clicked on a circle or not
         canvas.addEventListener('click', this.handleClick.bind(this), false);
     },
 
@@ -32,6 +33,9 @@ Canvas.prototype = {
         circleClickedIdx = Timeline.getCircle(this.circleCoords, mouseX, mouseY);
 
         if(circleClickedIdx != -1) {
+            // change the color
+            // display some text
+            // change the timeline
             console.log("circle was clicked");
         }
     },
@@ -52,8 +56,10 @@ Canvas.prototype = {
         ctx.stroke();
     },
 
-    drawCircle: function(x, y, radius) {
+    drawCircle: function(x, y, radius, style) {
         var ctx = this.canvas.getContext("2d");
+
+        // switch on the style to different colors
 
         ctx.beginPath();
         ctx.fillStyle = "rgba(0, 0, 0, .5)"
