@@ -28,10 +28,9 @@ Canvas.prototype = {
     },
 
     drawLine: function(start, end) {
-        var canvas = this.canvas,
-            ctx = canvas.getContext("2d");
+        var ctx = this.canvas.getContext("2d");
 
-        ctx.translate(.5, .5);
+        ctx.translate(.5, .5); // get rid of blurriness
 
         ctx.moveTo(start[0], start[1]);
         ctx.lineTo(end[0], end[1]);
@@ -42,7 +41,9 @@ Canvas.prototype = {
         var ctx = this.canvas.getContext("2d");
 
         ctx.beginPath();
-        ctx.arc(x, y, radius, 0, 2*Math.PI);
+        ctx.fillStyle = "rgba(0, 0, 0, .5)"
+        ctx.arc(x, y, radius, 0, 2*Math.PI); // start and end of the arc
+        ctx.fill();
         ctx.stroke();
 
     }
