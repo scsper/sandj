@@ -24,6 +24,7 @@ Canvas.prototype = {
     draw: function() {
         var height = this.canvas.height / 2;
         this.drawLine([0, height], [this.canvas.width, height]);
+        this.drawCircle(20, height, 20);
     },
 
     drawLine: function(start, end) {
@@ -37,7 +38,12 @@ Canvas.prototype = {
         ctx.stroke();
     },
 
-    drawCircle: function() {
+    drawCircle: function(x, y, radius) {
+        var ctx = this.canvas.getContext("2d");
+
+        ctx.beginPath();
+        ctx.arc(x, y, radius, 0, 2*Math.PI);
+        ctx.stroke();
 
     }
 };
