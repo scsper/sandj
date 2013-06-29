@@ -31,8 +31,10 @@ Timeline.prototype = {
         circleClickedIdx = this.getCircle(mouseX, mouseY);
 
         if(circleClickedIdx != -1) {
-            // change the color
-            // display some text
+            this.resetActives();
+            this.coordinates[circleClickedIdx].active = 1;
+
+            this.draw();
             // change the timeline
             console.log("circle was clicked");
         }
@@ -61,10 +63,12 @@ Timeline.prototype = {
             numCircles = cfg.length,
             startPos = this.RADIUS,
             pxInterval = Math.floor(width / numCircles),
-            coordinates = [];
+            coordinates = [],
+            active;
 
         for(i = 0; i < numCircles; i++) {
-            coordinates.push({x: startPos + pxInterval * i, y: height / 2, radius: this.RADIUS});
+            this.coordinates ? active = this.coordinates[i].active : active = 0;
+            coordinates.push({x: startPos + pxInterval * i, y: height / 2, radius: this.RADIUS, active: active});
         }
 
         return coordinates;
@@ -93,5 +97,12 @@ Timeline.prototype = {
         }
 
         return positions;
+    },
+
+    resetActives: function() {
+        var coords = this.coordinates;
+        for(var i = 0; i < coords.length; i++) {
+            coords[i].active = 0;
+        }
     }
 };
