@@ -1,23 +1,8 @@
-/*@font-face {
-  font-family: 'Amatic SC';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Amatic SC Regular'), local('AmaticSC-Regular'), url(http://themes.googleusercontent.com/static/fonts/amaticsc/v3/DPPfSFKxRTXvae2bKDzp5D8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
-}
-@font-face {
-  font-family: 'Amatic SC';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Amatic SC Bold'), local('AmaticSC-Bold'), url(http://themes.googleusercontent.com/static/fonts/amaticsc/v3/IDnkRTPGcrSVo50UyYNK73hCUOGz7vYGh680lGh-uXM.woff) format('woff');
-}
-*/
+
 /* Reset ================ */    
 * { box-sizing:border-box; }
-        
-/*a { cursor:pointer; text-decoration:none; color:#111; }
-a:hover { text-decoration:underline; }*/
-    
-li.roll.hidden{
+         
+.creatures li.roll{
     display:none;
 }
     
@@ -30,7 +15,7 @@ li.roll.hidden{
    text-align:center;
    width:260px;
    list-style:none;
-   margin:0 auto;
+   margin:200px -50px 0;
    padding:15px 30px;
    -webkit-user-select:none;
 }
@@ -50,36 +35,35 @@ figure {
         width:200px;
         height:200px;
         padding:40px;
+        margin:-215px;
         box-shadow:inset -10px -30px rgba(0,0,0,.06);
         -moz-border-radius:100px;
         -webkit-border-radius:100px;
         border-radius:50%;
         text-align:center;
+        z-index: 1;
     }
-    .roll figure{
-        animation:roll 5s ease-in-out infinite;
-        -webkit-animation:roll 5s ease-in-out infinite;
-    }
-    @-webkit-keyframes roll { 25%{-webkit-transform: translate(300px) rotate(360deg); } 75%{-webkit-transform: translate(-300px) rotate(-360deg); } }
-    @keyframes roll {  25%{ transform: translate(300px) rotate(360deg); } 75%{ transform: translate(-300px) rotate(-360deg); } }
 
-    li:nth-child(5n+1) figure,  li:nth-child(5n+1) .shadow { 
+    li:nth-child(6n+1) figure,  li:nth-child(6n+1) .shadow { 
         animation-delay:-3s; 
         -webkit-animation-delay:-3s; 
     }
-    li:nth-child(5n+2) figure,li:nth-child(5n+2) .shadow { 
+    li:nth-child(6n+2) figure,li:nth-child(6n+2) .shadow { 
         animation-delay:-1s; 
         -webkit-animation-delay:-1s; 
     }
-    li:nth-child(5n+3) figure, li:nth-child(5n+3) .shadow { 
+    li:nth-child(6n+3) figure, li:nth-child(6n+3) .shadow { 
         animation-delay:-4s;
         -webkit-animation-delay:-4s; 
     }
-    li:nth-child(5n+4) figure, li:nth-child(5n+4) .shadow { 
+    li:nth-child(6n+4) figure, li:nth-child(6n+4) .shadow { 
         animation-delay:-.2.5s;
         -webkit-animation-delay:-.2.5s;
     }   
-    
+    li:nth-child(6n+5) figure, li:nth-child(6n+5) .shadow { 
+        animation-delay:-2.5s;
+        -webkit-animation-delay:-2.5s;
+    }   
     
     li:hover figure { padding:30px 40px; }
     li:hover .click-anim {-webkit-transform:translateY(-6px); }
@@ -110,16 +94,11 @@ figure {
         border-radius:100%;
         margin:-15px 0 0 30%;
         transition:.3s;
+        z-index: 0;
     }
     li:hover .shadow { background:rgba(0,0,0,.05); } 
     li:active .shadow { background:rgba(0,0,0,.08); width:70%; }
     
-    .roll .shadow{
-        animation:shadow_roll 5s ease-in-out infinite;
-        -webkit-animation:shadow_roll 5s ease-in-out infinite;
-    }
-    @-webkit-keyframes shadow_roll { 25%{-webkit-transform: translate(330px) } 75%{-webkit-transform: translate(-310px)  } }
-    @keyframes shadow_roll {  25%{ transform: translate(300px) } 75%{ transform: translate(-300px)  } }
 
     
 /* Eyes ======================================================== */
@@ -211,6 +190,21 @@ figure {
 
 
 /* Behaviors =================================================== */  
+
+    .roll .shadow{
+        animation:shadow_roll 5s ease-in-out infinite;
+        -webkit-animation:shadow_roll 5s ease-in-out infinite;
+    }
+    @-webkit-keyframes shadow_roll { 25%{-webkit-transform: translate(330px) } 75%{-webkit-transform: translate(-310px)  } }
+    @keyframes shadow_roll {  25%{ transform: translate(300px) } 75%{ transform: translate(-300px)  } }
+
+    .roll figure{
+        animation:roll 5s ease-in-out infinite;
+        -webkit-animation:roll 5s ease-in-out infinite;
+    }
+    @-webkit-keyframes roll { 25%{-webkit-transform: translate(300px) rotate(360deg); } 75%{-webkit-transform: translate(-300px) rotate(-360deg); } }
+    @keyframes roll {  25%{ transform: translate(300px) rotate(360deg); } 75%{ transform: translate(-300px) rotate(-360deg); } }
+
     .hungry .mouth { 
         animation:hungry .5s infinite; 
         -webkit-animation:hungry .5s infinite; 

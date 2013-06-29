@@ -15,3 +15,6 @@
 .centered {
     text-align: center;
 }
+
+/*.header a{-webkit-transition-property:color,background-color,padding-left;-webkit-transition-duration:500ms,500ms,500ms}
+.header a:hover{background-color:#efefef;color:#333;padding-left:30px}*/

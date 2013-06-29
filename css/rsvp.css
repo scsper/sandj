@@ -1,3 +1,8 @@
 input.notice {
-	margin:.5em auto ;
+	margin:1.5em ;
 }
+
+.rsvp-form input, .rsvp-form label, .rsvp-form select, legend {
+	margin: 1em 1.3em 0;
+}
+
