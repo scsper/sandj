@@ -32,6 +32,10 @@ input.submit, .when{
 	margin:1em .5em .5em .5em;
 	padding: .5em;
 }
+img.section{
+	height:15%;
+	margin: 1em auto -5em;
+}
 
 </style>
 
