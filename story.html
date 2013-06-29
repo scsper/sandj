@@ -56,8 +56,19 @@
     <script src="js/timeline.js"></script>
     <script src="js/canvas.js"></script>
     <script>
-        var c = new Canvas("timeline-canvas");
-        c.init();
+        // var c = new Canvas("timeline-canvas");
+        // c.init();
+        var cfg, timeline, carousel;
+
+        // position is scott, jess, or both
+        cfg = [
+            {position: "both", text: "blah", img: "blah", header: "blah"},
+            {position: "both", text: "blah", img: "blah", header: "blah"},
+            {position: "both", text: "blah", img: "blah", header: "blah"},
+            {position: "both", text: "blah", img: "blah", header: "blah"}
+        ];
+
+        var timeline = new Timeline(cfg, "timeline-canvas");
     </script>
 
 </html>

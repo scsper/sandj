@@ -1,6 +1,6 @@
 function Canvas(selector) {
     this.selector = selector;
-    this.circleCoords = [];
+    this.coordinates = [];
 }
 
 Canvas.prototype = {
@@ -10,13 +10,8 @@ Canvas.prototype = {
     },
 
     bind: function() {
-        var canvas = document.getElementById(this.selector);
-
         // resize the canvas to fill browser window dynamically
         window.addEventListener('resize', this.resize.bind(this), false);
-
-        // detect whether you have clicked on a circle or not
-        canvas.addEventListener('click', this.handleClick.bind(this), false);
     },
 
     resize: function() {
@@ -24,26 +19,16 @@ Canvas.prototype = {
         this.canvas.width = document.getElementsByClassName("main")[0].offsetWidth;
         this.canvas.height = document.getElementsByTagName("body")[0].offsetHeight - document.getElementsByClassName("main")[0].offsetHeight;
 
-        this.draw();
+        this.redraw();
     },
 
-    handleClick: function(e) {
-        var mouseX = e.layerX, mouseY = e.layerY, circleClickedIdx;
-
-        circleClickedIdx = Timeline.getCircle(this.circleCoords, mouseX, mouseY);
-
-        if(circleClickedIdx != -1) {
-            // change the color
-            // display some text
-            // change the timeline
-            console.log("circle was clicked");
-        }
-    },
-
-    draw: function() {
-        var height = this.canvas.height / 2;
+    redraw: function() {
+        var height = this.canvas.height / 2, i, coords = this.coordinates;
         this.drawLine([0, height], [this.canvas.width, height]);
-        this.drawCircle(20, height, 20);
+
+        for(i = 0; i < coords.length; i++) {
+            this.drawCircle(coords[i].x, coords[i].y, coords[i].radius);
+        }
     },
 
     drawLine: function(start, end) {
@@ -62,12 +47,13 @@ Canvas.prototype = {
         // switch on the style to different colors
 
         ctx.beginPath();
-        ctx.fillStyle = "rgba(0, 0, 0, .5)"
+        ctx.fillStyle = "rgba(0, 0, 0, .3)"
         ctx.arc(x, y, radius, 0, 2*Math.PI); // start and end of the arc
         ctx.fill();
         ctx.stroke();
+    },
 
-        this.circleCoords.push({x: x, y: y, radius: radius});
-        console.log(this.circleCoords);
+    setCoordinates: function(coords) {
+        this.coordinates = coords;
     }
 };
