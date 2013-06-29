@@ -67,7 +67,6 @@ Timeline.prototype = {
             coordinates.push({x: startPos + pxInterval * i, y: height / 2, radius: this.RADIUS});
         }
 
-        debugger;
         return coordinates;
     },
 
