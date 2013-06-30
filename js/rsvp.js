@@ -1,20 +1,23 @@
-var MAX_NUMBER_GUESTS = 5;
+var MAX_NUMBER_GUESTS = 4;
 
 function changedNum(){
-	var selectBox = document.getElementById("number");
-	var number = selectBox.options[selectBox.selectedIndex].value;
-	var critters = document.getElementsByClassName('roll');
-	console.log(critters);
-	// var $critters = $(" li.roll" );
-	var i = 1;
+	var i = 0;
+	var number 		= document.getElementById("number").selectedIndex;
+	var critters 	= document.getElementsByClassName('roll');
 
 	while(i < MAX_NUMBER_GUESTS){
-
 		if(i < number){
-			critters[i-1].style.display = "inline-block";
+			critters[i].style.display = "inline-block";
 		}else{
-			critters[i-1].style.display = "none";
+			critters[i].style.display = "none";
 		}
 		i++;
 	}
+}
+
+function rsvpsubmit(){
+	var form 		= document.forms["rsvp-form"];
+	var attendee 	= form["name"].value;
+	var guests 		= form["guests"].value;
+	var number 		= document.getElementById("number").selectedIndex;
 }

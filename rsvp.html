@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="css/layout.css">
         <link rel="stylesheet" href="css/rsvp.css">
         <link rel="stylesheet" type="text/css" href="css/mycritters.css">
+        <link rel="stylesheet" href="css/skins.css">
     </head>
     <body>
         <div class="content pure-g-r">
@@ -21,11 +22,11 @@
             </div>
         </div>
         <div class="main pure-u-1 centered">
-            <form class=" rsvp-form pure-form " onsubmit="rsvpsubmit">
+            <form name="rsvp-form" class="rsvp-form pure-form" onsubmit="rsvpsubmit(); return false;" method="get">
                 <fieldset>
                     <legend class = "centered"> RSVP </legend>
 <!--                         <label for="attendee">Your Name</label> -->
-                        <input class="pure-input-1-6" type="text" placeholder="Your Name" required>
+                        <input name="name" class="pure-input-1-6" type="text" placeholder="Your Name" required>
 <!-- 
                         <label for="number">Number of Attendees</label> -->
                         <select id="number" onchange="changedNum(this);">
@@ -36,7 +37,7 @@
                             <option value = "5">+4 guests</option>
                         <select>
                       <!--   <label for="guests">Names of Guests in your party (Optional)</label> -->
-                        <input class="pure-input-1-6" placeholder="Names of Guests(Optional)" type="text">
+                        <input name="guests" class="pure-input-1-6" placeholder="Names of Guests(Optional)" type="text">
 <!--                         <button type="submit" class="pure-button notice">Submit</button> -->
                         <input class="pure-button notice" name="submit" type="submit" text="RSVP">
             </form>

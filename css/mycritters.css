@@ -20,14 +20,6 @@
    -webkit-user-select:none;
 }
 
-
-/* Header============================== */
-    hgroup { text-align:center; white-space:nowrap; }  
-    .logo, .make { position:relative; display:block; color:#494636; }
-    .logo { font-size:4rem; }
-    
-    .make { font-size:2rem; }
-
 /* Creature ================== */
 
 figure {
@@ -41,7 +33,6 @@ figure {
         -webkit-border-radius:100px;
         border-radius:50%;
         text-align:center;
-        z-index: 1;
     }
 
     li:nth-child(6n+1) figure,  li:nth-child(6n+1) .shadow { 
