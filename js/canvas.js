@@ -38,8 +38,6 @@ Canvas.prototype = {
     drawLine: function(start, end) {
         var ctx = this.canvas.getContext("2d");
 
-        // ctx.translate(.5, .5); // get rid of blurriness... doesn't work when redrawing so never mind
-
         ctx.moveTo(start[0], start[1]);
         ctx.lineTo(end[0], end[1]);
         ctx.stroke();

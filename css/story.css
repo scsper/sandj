@@ -16,3 +16,26 @@
     line-height: 1.4em;
     max-height: 70%;
 }
+
+.story .arrow-right {
+    position: relative;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+
+    border-left: 60px solid green;
+    vertical-align: middle;
+}
+
+.story .arrow-left {
+    position: relative;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+
+    border-right: 60px solid green;
+}

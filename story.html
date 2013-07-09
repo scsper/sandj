@@ -23,24 +23,24 @@
             <div class="main story pure-u-1">
                 <div class="pure-g-r">
                     <div class="pure-u-1-24 back-arrow">
-                        <img src="assets/bttn-left.gif"></img>
+                        <div class="arrow-left"></div>
                     </div>
 
                     <div class="pure-u-11-24">
                         <div class="1 box carousel-image">
-                            <img src="dawww.jpg"></img>
+                            <img id="carousel-img-container" src="dawww.jpg"></img>
                         </div>
                     </div>
 
                     <div class="pure-u-11-24">
                         <div class="1-box carousel-text">
-                            <h1 class="centered carousel-head">Hi.</h1>
-                            <h2 class="carousel-subhead">Pure CSS test.</h2>
+                            <h1 id="carousel-text-header" class="centered carousel-head">Hi.</h1>
+                            <h2 id="carousel-text-body" class="carousel-subhead">Pure CSS test.</h2>
                         </div>
                     </div>
 
                     <div class="pure-u-1-24 forward-arrow">
-                        <img src="assets/bttn-right.gif"></img>
+                        <div class="arrow-right"></div>
                     </div>
                 </div>
             </div>
@@ -55,10 +55,10 @@
 
     <script src="js/timeline.js"></script>
     <script src="js/canvas.js"></script>
+    <script src="js/carousel.js"></script>
+
     <script>
-        // var c = new Canvas("timeline-canvas");
-        // c.init();
-        var cfg, timeline, carousel;
+        var cfg, timeline, carouselCfg;
 
         // position is scott, jess, or both
         cfg = [
@@ -68,7 +68,16 @@
             {position: "both", text: "blah", img: "blah", header: "blah"}
         ];
 
+        carouselCfg = [
+            {img: "1.jpg", header: "1.jpg", text: "Hello world!"},
+            {img: "2.jpg", header: "2.jpg", text: "Hello world 2!"},
+            {img: "3.jpg", header: "3.jpg", text: "Hello world 3!"},
+            {img: "4.jpg", header: "4.jpg", text: "Hello world 4!"},
+            {img: "5.jpg", header: "5.jpg", text: "Hello world 5!"}
+        ];
+
         var timeline = new Timeline(cfg, "timeline-canvas");
+        var carousel = new Carousel(carouselCfg);
     </script>
 
 </html>
