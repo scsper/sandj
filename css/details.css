@@ -5,17 +5,23 @@ html {
 }
 
 body { 
+/*		background: #eee ;*/
 	height: 100%;
 	margin: 0;
 	padding: 0 
 }
 
 #map-canvas {
-	height: 200px;
-	width: 200px;
+	float:right;
+	clear:right;
+	min-height: 200px;
+	min-width: 200px;
+	max-height: 600px;
+	max-width: 500px;
 }
 
 form {
+	float:left;
 	margin: auto .5em;
     padding: .5em;
 }
@@ -24,14 +30,34 @@ input.submit, .when{
 	padding: .5em;
 }
 
-.when {
-	margin:3em .5em .5em .5em;
-	padding: .5em;
+.when.detail {
+	margin:0 auto;
 }
- .where, .how, .gifts{
-	margin:1em .5em .5em .5em;
+
+.detail {
+	line-height:1.5em;
+	clear:right;
+	display:relative;
+	max-width: 800px;
 	padding: .5em;
+	margin:1em auto;
 }
+legend{
+	line-height: 2em;
+	letter-spacing: .8px;
+	width:100%;
+	font-size:125%;
+	color:#333;
+	display:block;
+	margin: 0 auto;
+	border-bottom: 1px solid #e5e5e5;
+
+}
+
+legend:first-of-type {
+	margin: 3em auto 1em;
+}
+
 img.section{
 	height:15%;
 	margin: 1em auto -5em;
