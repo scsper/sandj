@@ -1,5 +1,4 @@
 function Carousel(cfg) {
-    debugger;
     this.cfg = cfg;
     this.imageContainer = document.getElementById('carousel-img-container');
     this.textHeader = document.getElementById('carousel-text-header');
@@ -26,7 +25,6 @@ Carousel.prototype = {
     previous: function() {
         this.idx ? this.idx-- : this.idx;
         this.switchImage();
-
     },
 
     switchImage: function() {
