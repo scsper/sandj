@@ -3,7 +3,6 @@ sandj
 
 - php script
     - j to input guests into csv
-    - read csv
     - input into database
     - build an html email
     - send html email to all email addresses
