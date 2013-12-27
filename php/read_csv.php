@@ -14,8 +14,8 @@ function get_guests() {
             // echo "<p> $num fields in line $row: <br /></p>\n";
             $row++;
 
-            $guest = new Guest($data[0], $data[1], $data[2], $data[3]);
-            $guest->set_code(get_unique_code());
+            $guest = new Guest();
+            $guest->set_all($data[0], $data[1], $data[2], $data[3], get_unique_code());
             array_push($guests, $guest);
         }
         fclose($handle);
