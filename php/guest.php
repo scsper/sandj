@@ -31,19 +31,19 @@ class Guest {
     }
 
     public function retrieve($id) {
-        $sql = "SELECT * FROM guest WHERE id=\"" . $id . "\"";
+        $sql = sprintf("SELECT * FROM guest WHERE id=%d", mysql_real_escape_string($id));
         $result = mysql_query($sql);
 
         if (!$result) {
             die('Guest->retrieve(): Invalid query: ' . mysql_error());
         }
 
-        $guest = mysql_fetch_array($result);
-
-        $this->name = $guest[1];
-        $this->rsvp = $guest[2];
-        $this->familyId = $guest[3];
-        $this->foodId = $guest[4];
+        while ($guest = mysql_fetch_assoc($result)) {
+            $this->name = $guest['name'];
+            $this->rsvp = $guest['rsvp_id'];
+            $this->familyId = $guest['family_id'];
+            $this->foodId = $guest['food_id'];
+        }
     }
 
     public function add() {

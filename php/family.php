@@ -37,21 +37,21 @@ class Family {
             $guest->retrieve($id);
             array_push($this->members, $guest);
         }
-
-        echo 'The family size is ' . count($this->members);
     }
 
     private function get_family_id($code) {
-        $sql = "SELECT family_id FROM guest WHERE code='" . $code . "'";
+        $sql = sprintf("SELECT family_id FROM guest WHERE code='%s'", mysql_real_escape_string($code));
         $result = mysql_query($sql);
 
         if (!$result) {
             die('family->get_family_id(): Invalid query: ' . mysql_error());
         }
 
-        $id = mysql_fetch_array($result);
-        echo 'The family id is ' . $id[0];
-        return $id[0];
+        while ($row = mysql_fetch_assoc($result)) {
+            $familyId = $row['family_id'];
+        }
+
+        return $familyId;
     }
 }
 
