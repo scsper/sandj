@@ -21,22 +21,24 @@ class Family {
         }
     }
 
-    public function get_family_members($id) {
-        $sql = "SELECT id FROM guest WHERE family_id=" . $id;
+    public function get_family_members($familyId) {
+        $sql = sprintf("SELECT id FROM guest WHERE family_id=%d", mysql_real_escape_string($familyId));
         $result = mysql_query($sql);
 
         if (!$result) {
-            die('family->get_family_members(): Invalid query: ' . mysql_error());
+            $message  = 'family->get_family_members(): Invalid query: ' . mysql_error() . "\n";
+            $message .= 'Whole query: ' . $query;
+            die($message);
         }
 
-        $ids = mysql_fetch_array($result);
-
-        for($i = 0; $i < count($ids); $i++) {
-            $id = $ids[$i];
+        while ($row = mysql_fetch_assoc($result)) {
+            $id = $row['id'];
             $guest = new Guest();
             $guest->retrieve($id);
             array_push($this->members, $guest);
         }
+
+        echo 'The family size is ' . count($this->members);
     }
 
     private function get_family_id($code) {
@@ -48,6 +50,7 @@ class Family {
         }
 
         $id = mysql_fetch_array($result);
+        echo 'The family id is ' . $id[0];
         return $id[0];
     }
 }
