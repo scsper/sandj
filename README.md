@@ -1,12 +1,64 @@
 sandj
 =====
 
-- php script
-    - j to input guests into csv
-    - input into database
-    - build an html email
-    - send html email to all email addresses
-    - write the email text
+# Tables
+* Guest
+    * Name
+    * Id
+    * RSVP Id
+    * Food Id
+    * Family
+    * Code
+* Food
+    * Id
+    * Category
+* RSVP
+    * Id
+    * Category
+
+# Actions
+* Retrieval
+    * Input: confirmation code
+    * Output: array of guest objects based on family ID
+* Setting
+    * Input: person id
+    * Output: setting the database for food and RSVP attrs.
+* Adding name
+    * Input: person id
+    * Output: setting name
+
+# Flows
+* Create
+    * Type in name & confirmation code
+    * Family names are returned -> able to fill RSVP status for each
+    * Thank you!
+* +1 Flow
+    * Look for the correct RSVP status
+    * "Will your sig. other be joining you?"
+        * Yes, then type in name; update name and change RSVP status
+
+
+# Objects
+* Guest
+    * Members
+        * Name
+        * RSVP
+        * Food
+        * Family
+        * Id
+    * Methods
+        * get_data(id): returns name, rsvp, food, and family
+        * set_pref(id): sets food and rsvp
+        * set_name(id): sets name of +1
+
+
+
+# To do
+* write script to add all names and families to DB
+* configure RSVP and food tables in DB
+
+
+
 
 - details.html
     - Add simple fade to images & text
