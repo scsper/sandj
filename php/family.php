@@ -26,7 +26,7 @@ class Family {
         $result = mysql_query($sql);
 
         if (!$result) {
-            die('Invalid query: ' . mysql_error());
+            die('family->get_family_members(): Invalid query: ' . mysql_error());
         }
 
         $ids = mysql_fetch_array($result);
@@ -44,7 +44,7 @@ class Family {
         $result = mysql_query($sql);
 
         if (!$result) {
-            die('get_family_id(): Invalid query: ' . mysql_error());
+            die('family->get_family_id(): Invalid query: ' . mysql_error());
         }
 
         $id = mysql_fetch_array($result);
