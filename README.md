@@ -54,11 +54,9 @@ sandj
 
 
 # To do
-* write script to add all names and families to DB
-* configure RSVP and food tables in DB
-
-
-
+* write demo to take RSVP and food form
+* return HTML from PHP to display the form to submit RSVP and food
+* use JS to remove original div and put new div in
 
 - details.html
     - Add simple fade to images & text

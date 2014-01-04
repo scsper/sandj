@@ -14,6 +14,8 @@ class Endpoint {
             $code = $_POST['code'];
             $family = new Family($code);
             $family->display();
+        } else {
+            echo "ERROR: Invalid type";
         }
     }
 }

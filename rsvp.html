@@ -22,24 +22,53 @@
             </div>
         </div>
         <div class="main pure-u-1 centered">
-            <form name="rsvp-form" class="rsvp-form pure-form" onsubmit="rsvpsubmit(); return false;" method="get">
+            <form id="retrieve-guests" name="rsvp-form" class="rsvp-form pure-form" onsubmit="rsvpsubmit(); return false;" method="get">
                 <fieldset>
                     <legend class = "centered"> RSVP </legend>
-<!--                         <label for="attendee">Your Name</label> -->
-                        <input name="name" class="pure-input-1-6" type="text" placeholder="Your Name" required>
-<!-- 
-                        <label for="number">Number of Attendees</label> -->
-                        <select id="number" onchange="changedNum(this);">
-                            <option value = "1">+0 guests</option>
-                            <option value = "2">+1 guest</option>
-                            <option value = "3">+2 guests</option>
-                            <option value = "4">+3 guests</option>
-                            <option value = "5">+4 guests</option>
-                        <select>
-                      <!--   <label for="guests">Names of Guests in your party (Optional)</label> -->
-                        <input name="guests" class="pure-input-1-6" placeholder="Names of Guests(Optional)" type="text">
-<!--                         <button type="submit" class="pure-button notice">Submit</button> -->
+                        <input id="name" name="name" class="pure-input-1-6" type="text" placeholder="Your Name" required>
+                        <input id="code" name="code" class="pure-input-1-6" type="text" placeholder="Your Code" required>
+                        <input type="hidden" name="type" value="retrieval">
                         <input class="pure-button notice" name="submit" type="submit" text="RSVP">
+            </form>
+
+            <form id="submit-rsvp" name="submit-form" class="rsvp-form pure-form" method="post">
+              <fieldset>
+                <label style="color: black;">Moon Sperling</label>
+                <select name="rsvp1">
+                  <option value = "0">Are you coming?</option>
+                  <option value = "1">Yes</option>
+                  <option value = "2">No</option>
+                </select>
+
+                <select name="food1">
+                  <option value = "0">What are you eating?</option>
+                  <option value = "1">Chicken</option>
+                  <option value = "2">Fish</option>
+                  <option value = "3">Beef</option>
+                </select>
+
+                <br/>
+
+                <label style="color: black;">Halmoni Yoon</label>
+                <select name="rsvp1">
+                  <option value = "0">Are you coming?</option>
+                  <option value = "1">Yes</option>
+                  <option value = "2">No</option>
+                </select>
+
+                <select name="food1">
+                  <option value = "0">What are you eating?</option>
+                  <option value = "1">Chicken</option>
+                  <option value = "2">Fish</option>
+                  <option value = "3">Beef</option>
+                </select>
+
+                <br/>
+
+                <input type="hidden" name="type" value="submission">
+                <input class="pure-button notice" name="submit" type="submit" text="Save">
+              </fieldset>
+
             </form>
         </div>
 
@@ -107,6 +136,8 @@
 
     </body>
 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/ajax.js"></script>
     <script src="js/rsvp.js"></script>
     <script src="js/details.js">
     </script>

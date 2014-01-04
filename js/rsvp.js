@@ -16,8 +16,8 @@ function changedNum(){
 }
 
 function rsvpsubmit(){
-	var form 		= document.forms["rsvp-form"];
-	var attendee 	= form["name"].value;
-	var guests 		= form["guests"].value;
-	var number 		= document.getElementById("number").selectedIndex;
+	// var form 		= document.forms["rsvp-form"];
+	// var attendee 	= form["name"].value;
+	// var guests 		= form["guests"].value;
+	// var number 		= document.getElementById("number").selectedIndex;
 }

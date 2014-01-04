@@ -15,11 +15,8 @@ class Guest {
     }
 
     public function display() {
-        echo $this->name;
-        echo $this->rsvp;
-        echo $this->familyId;
-        echo $this->foodId;
-        echo '<br/>';
+        $arr = array('name' => $this->name, 'rsvp' => $this->rsvp, 'food' => $this->foodId);
+        echo json_encode($arr);
     }
 
     public function set_all($firstName, $lastName, $familyId, $rsvp, $code) {

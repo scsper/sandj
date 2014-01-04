@@ -6,3 +6,6 @@ input.notice {
 	margin: 1em 1.3em 0;
 }
 
+.pure-form .submit-name label {
+    font-size: 40px;
+}
