@@ -1,0 +1,53 @@
+<html>
+<body>
+<form id="submit-rsvp" name="submit-form" class="rsvp-form pure-form" method="post">
+  <fieldset>
+    <label style="color: black;">Moon Sperling</label>
+    <select name="rsvp[]">
+      <option value = "0">Are you coming?</option>
+      <option value = "1">Yes</option>
+      <option value = "2">No</option>
+    </select>
+
+    <select name="food[]">
+      <option value = "0">What are you eating?</option>
+      <option value = "1">Chicken</option>
+      <option value = "2">Fish</option>
+      <option value = "3">Beef</option>
+    </select>
+
+    <input type="hidden" name="id[]" value="1">
+
+
+    <br/>
+
+    <label style="color: black;">Halmoni Yoon</label>
+    <select name="rsvp[]">
+      <option value = "0">Are you coming?</option>
+      <option value = "1">Yes</option>
+      <option value = "2">No</option>
+    </select>
+
+    <select name="food[]">
+      <option value = "0">What are you eating?</option>
+      <option value = "1">Chicken</option>
+      <option value = "2">Fish</option>
+      <option value = "3">Beef</option>
+    </select>
+
+    <input type="hidden" name="id[]" value="2">
+
+
+    <br/>
+
+    <input type="hidden" name="type" value="submission">
+    <input class="pure-button notice" name="submit" type="submit" text="Save">
+  </fieldset>
+
+</form>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="js/ajax.js"></script>
+
+</body>
+</html>
