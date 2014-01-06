@@ -13,16 +13,18 @@ class Endpoint {
         if($this->type == "retrieval") {
             $code = $_POST['code'];
             $family = new Family($code);
-            $family->display();
+            $html = $family->display();
+            echo $html;
         } else if($this->type == "submission") {
             $rsvp = $_POST['rsvp'];
             $food = $_POST['food'];
             $id = $_POST['id'];
-            echo "Inside submission.\n";
-            echo $rsvp . ", " . $food . ", " . $id;
+            $family = $_POST['family'];
 
             for($i = 0; $i < count($id); $i++) {
-                echo "Id: " . $id[$i] . " Rsvp: " . $rsvp[$i] . " Food: " . $food[$i] . "\n";
+                $guest = new Guest();
+                $guest->update($id[$i], $rsvp[$i], $food[$i]);
+                $guest->display_update_success();
             }
         } else {
             echo "ERROR: Invalid type";

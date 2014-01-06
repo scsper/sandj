@@ -30,7 +30,7 @@ function bind_retrieval() {
         });
 
         request.done(function (response, textStatus, jqXHR){
-            console.log(response);
+            $( "div.main" ).html( response );
             console.log("Hooray, it worked!");
 
             bind();
@@ -92,8 +92,7 @@ function bind_submit() {
         });
 
         request.done(function (response, textStatus, jqXHR){
-            console.log(response);
-            console.log("Hooray, it worked!");
+            $( "div.main" ).html( response );
 
             bind();
         });

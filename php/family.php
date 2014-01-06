@@ -16,9 +16,20 @@ class Family {
     }
 
     public function display() {
+        $html = '<form id="submit-rsvp" name="submit-form" class="rsvp-form pure-form" method="post">
+                <fieldset><legend class="centered"> RSVP </legend>';
+
         for($i = 0; $i < count($this->members); $i++) {
-            $this->members[$i]->display();
+            $html .= $this->members[$i]->display();
         }
+
+        $html .= '<input type="hidden" name="type" value="submission">
+                <input class="pure-button notice" name="submit" type="submit" text="Save">
+              </fieldset>
+
+            </form>';
+
+        return $html;
     }
 
     public function get_family_members($familyId) {
