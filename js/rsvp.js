@@ -1,14 +1,13 @@
 var MAX_NUMBER_GUESTS = 4;
 
-function changedNum(){
+function addCritters(count){
 	var i = 0;
-	var number 		= document.getElementById("number").selectedIndex;
 	var critters 	= document.getElementsByClassName('roll');
 
-	while(i < MAX_NUMBER_GUESTS){
-		if(i < number){
+	while(i < MAX_NUMBER_GUESTS) {
+		if(i < count){
 			critters[i].style.display = "inline-block";
-		}else{
+		} else {
 			critters[i].style.display = "none";
 		}
 		i++;

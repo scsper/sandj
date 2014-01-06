@@ -10,3 +10,17 @@ input.notice {
     font-size: 40px;
     color: black;
 }
+
+.centered-table {
+    margin-left: auto;
+    margin-right:auto;
+}
+
+.small-spacing {
+    margin-top: 13px;
+    display: inline-block;
+}
+
+.small-link {
+    text-decoration: underline;
+}

@@ -62,6 +62,7 @@ function bind_submit() {
         var $inputs = $form.find("input, select, button, textarea");
         var serializedData = $form.serializeArray();
         var submitData = {};
+        var critterCount = 0;
 
         // let's disable the inputs for the duration of the ajax request
         $inputs.prop("disabled", true);
@@ -91,8 +92,17 @@ function bind_submit() {
             dataType: "text"
         });
 
+        for(var i = 0; i < submitData["rsvp[]"].length; i++) {
+            var rsvpResponse = submitData["rsvp[]"][i];
+
+            if(rsvpResponse === "1") {
+                critterCount++;
+            }
+        }
+
         request.done(function (response, textStatus, jqXHR){
             $( "div.main" ).html( response );
+            addCritters(critterCount);
 
             bind();
         });
