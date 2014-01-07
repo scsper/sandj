@@ -56,7 +56,7 @@ class Endpoint {
             }
 
             $closeHtml = '</tbody>
-            </table><small class="small-spacing">Click <a class="small-link">here</a> if you need to make changes.';
+            </table><small class="small-spacing">Click <a class="small-link" href="rsvp.html">here</a> if you need to make changes.';
 
             echo $message . $baseHtml . $guestHtml  . $closeHtml;
 

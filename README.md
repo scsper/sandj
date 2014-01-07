@@ -54,10 +54,8 @@ sandj
 
 
 # To do
-* write demo to take RSVP and food form
-* return HTML from PHP to display the form to submit RSVP and food
-* use JS to remove original div and put new div in
 * account for code not found
+* +1 flow
 
 - details.html
     - Add simple fade to images & text

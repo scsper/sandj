@@ -17,24 +17,45 @@ class Guest {
 
     public function display() {
         $html = '
-        <label style="color: black;">' . $this->name . '</label>
+        <label style="color: black;">' . $this->name . '</label>';
+
+        $rsvpStr = '
         <select name="rsvp[]">
-          <option value = "5">Are you coming?</option>
+          <option value = "2">Are you coming?</option>
           <option value = "1">Yes</option>
           <option value = "0">No</option>
-        </select>
+        </select>';
 
-        <select name="food[]">
+        $foodStr = '<select name="food[]">
           <option value = "0">What are you eating?</option>
-          <option value = "1">Chicken</option>
-          <option value = "2">Fish</option>
-          <option value = "3">Beef</option>
-        </select>
+          <option value = "1">Beef</option>
+          <option value = "2">Chicken</option>
+          <option value = "3">Fish</option>
+          <option value = "4">Vegetarian</option>
+        </select>';
 
-        <input type="hidden" name="id[]" value="' . $this->id . '">
-        <br/>';
+        $rsvpStr = $this->replace_string($rsvpStr, "rsvp");
+        $foodStr = $this->replace_string($foodStr, "food");
+
+        $html .=  $rsvpStr . $foodStr . '<input type="hidden" name="id[]" value="' . $this->id . '"><br/>';
 
         return $html;
+    }
+
+    private function replace_string($subject, $type) {
+        $selected = '" selected="selected"';
+        if($type == "rsvp") {
+            $replace = (string)$this->rsvp . $selected;
+            $search = (string)$this->rsvp . '"';
+        } else if ($type == "food") {
+            $replace = (string)$this->foodId . $selected;
+            $search = (string)$this->foodId . '"';
+        } else {
+            return "ERROR: replace_string(): invalid type passed in";
+        }
+        $str = str_replace($search, $replace, $subject);
+        return $str;
+
     }
 
     public function display_update() {
