@@ -17,7 +17,7 @@ Map.prototype = {
 	},
 	calcRoute : function(origin1){
 		var start = origin1;
-		var end = "Westminster, CA";
+		var end = "600 N. Main St., Santa Ana, CA 92701";
 		var request = {
 			origin: start,
 			destination: end,
