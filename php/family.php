@@ -8,7 +8,12 @@ class Family {
     public function __construct($code) {
         $this->members = array();
         $id = $this->get_family_id($code);
-        $this->get_family_members($id);
+        if($id) {
+            $this->get_family_members($id);
+            $this->invalidId = false;
+        } else {
+            $this->invalidId = true;
+        }
     }
 
     public function members() {
@@ -16,6 +21,10 @@ class Family {
     }
 
     public function display() {
+        if($this->invalidId) {
+            return $this->display_error();
+        }
+
         $html = '<form id="submit-rsvp" name="submit-form" class="rsvp-form pure-form" method="post">
                 <fieldset><legend class="centered"> RSVP </legend>';
 
@@ -27,6 +36,21 @@ class Family {
                 <input class="pure-button notice" name="submit" type="submit" text="Save">
               </fieldset>
 
+            </form>';
+
+        return $html;
+    }
+
+    public function display_error() {
+        $error = "<h4 style='color:red;'>We're sorry, but that code does not exist in our database</h2>";
+        $html = '<form id="retrieve-guests" name="rsvp-form" class="rsvp-form pure-form" onsubmit="rsvpsubmit(); return false;" method="get">
+                <fieldset>
+                    <legend class = "centered"> RSVP </legend>' . $error . '
+                        <input id="name" name="name" class="pure-input-1-6" type="text" placeholder="Your Name" required>
+                        <input id="code" name="code" class="pure-input-1-6" type="text" placeholder="Your Code" required>
+                        <input type="hidden" name="type" value="retrieval">
+                        <input class="pure-button notice" name="submit" type="submit" text="RSVP">
+                </fieldset>
             </form>';
 
         return $html;
