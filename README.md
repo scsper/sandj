@@ -55,7 +55,9 @@ sandj
 
 # To do
 * +1 flow
-* change rsvp to home page (don't forget to remove navigation links)
 * write story
-* fill out details page
+* test if someone resets their rsvp/food
 * change critter colors
+* Font for Details page
+* Links to registries
+
