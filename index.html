@@ -1,42 +1,104 @@
+<!-- <!DOCTYPE html> -->
 <html>
     <head>
-        <title>Home page!</title>
+        <title>RSVP!</title>
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.0/pure-min.css">
         <link rel="stylesheet" href="css/layout.css">
-        <link rel="stylesheet" href="css/splash.css">
-        <script src="http://yui.yahooapis.com/3.10.3/build/yui/yui-min.js"></script>
+        <link rel="stylesheet" href="css/rsvp.css">
+        <link rel="stylesheet" type="text/css" href="css/mycritters.css">
+        <link rel="stylesheet" href="css/skins.css">
     </head>
-
     <body>
         <div class="content pure-g-r">
             <div class="header pure-u-1">
                 <div class="pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
-                    <a href="#" class="pure-menu-heading">SCOTT AND JESS</a>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="story.html">Story</a></li>
-                        <li><a href="details.html">Details</a></li>
-                        <li><a href="rsvp.html">RSVP</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="main splash pure-u-1">
-                <div class="pure-g-r">
-                    <div class="pure-u-1-3">
-                        <div class="1 box splash-image">
-                            <img src="dawww.jpg"></img>
-                        </div>
-                    </div>
-
-                    <div class="pure-u-2-3">
-                        <div class="1-box splash-text">
-                            <h1 class="splash-head">Hi.</h1>
-                            <h2 class="splash-subhead">Pure CSS test.</div>
-                        </div>
-                    </div>
-                </div>
+                <a href="#" class="pure-menu-heading">SCOTT AND JESS</a>
+                <ul>
+                    <li><a href="story.html">Story</a></li>
+                    <li><a href="details.html">Details</a></li>
+                    <li><a href="index.html">RSVP</a></li>
+                </ul>
             </div>
         </div>
+        <div class="main pure-u-1 centered">
+            <form id="retrieve-guests" name="rsvp-form" class="rsvp-form pure-form" onsubmit="rsvpsubmit(); return false;" method="get">
+                <fieldset>
+                    <legend class = "centered"> RSVP </legend>
+                        <input id="name" name="name" class="pure-input-1-6" type="text" placeholder="Your Name" required>
+                        <input id="code" name="code" class="pure-input-1-6" type="text" placeholder="Your Code" required>
+                        <input type="hidden" name="type" value="retrieval">
+                        <input class="pure-button notice" name="submit" type="submit" text="RSVP">
+                </fieldset>
+            </form>
+        </div>
+
+        <!-- Critters -->
+        <div id="pure-u-2-3 ">
+            <ul class="creatures centered" id="creatures">
+              <li>
+                <div class="click-anim">
+                  <figure class="hyper wink" style="background-color:#4ae9b8">
+                    <div class="eye"></div>
+                    <div class="eye"></div>
+                    <div class="mouth"></div>
+                  </figure>
+                </div>
+                <div class="shadow"></div>
+              </li>
+
+                <li class="roll">
+                                      <div class="shadow"></div>
+                    <div class="click-anim">
+                      <figure class="hungry" style="background-color:tomato">
+                        <div class="eye"></div>
+                        <div class="eye"></div>
+                        <div class="mouth"></div>
+                      </figure>
+                    </div>
+
+                  </li>
+                                  <li class="roll">
+                    <div class="click-anim">
+                      <figure class="hungry" style="background-color:tomato">
+                        <div class="eye"></div>
+                        <div class="eye"></div>
+                        <div class="mouth"></div>
+                      </figure>
+                    </div>
+                    <div class="shadow"></div>
+                  </li>
+                                  <li class="roll">
+                    <div class="click-anim">
+                      <figure class="hungry" style="background-color:tomato">
+                        <div class="eye"></div>
+                        <div class="eye"></div>
+                        <div class="mouth"></div>
+                      </figure>
+                    </div>
+                    <div class="shadow"></div>
+                  </li>
+                                  <li class="roll">
+                    <div class="click-anim">
+                      <figure class="hungry" style="background-color:tomato">
+                        <div class="eye"></div>
+                        <div class="eye"></div>
+                        <div class="mouth"></div>
+                      </figure>
+                    </div>
+                    <div class="shadow"></div>
+                  </li>
+
+          </ul>
+          <canvas id="myDrawing" width="200" height="200">
+            <p>Your browser doesn't support canvas.</p>
+            </canvas>
+        </div>
+
     </body>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/rsvp.js"></script>
+    <script src="js/details.js">
+    </script>
 </html>
