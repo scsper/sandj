@@ -68,7 +68,7 @@ class Guest {
     private function display_name() {
         $NO_NAME = 3;
         if($this->rsvp == $NO_NAME) {
-            return '<input type="text" placeholder="Name of your +1..." name="name"/>';
+            return '<input type="text" class="guest-name" placeholder="Name of your +1..." name="name"/>';
         } else {
             return '<label class="guest-name">' . $this->name . '</label>';
         }

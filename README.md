@@ -55,7 +55,7 @@ sandj
 
 # To do
 * +1 flow
-    * verify RSVP submission form on client side
+    * Verify RSVP submission form on client side
     * Protect against SQL injection
     * Update database with new name
 * write story
@@ -63,4 +63,5 @@ sandj
 * change critter colors
 * Font for Details page
 * Links to registries
+* Display all attendees for Jess & I
 

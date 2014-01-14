@@ -12,8 +12,23 @@ function bind_label() {
         var target = event.target;
         var value = $(target).text();
 
-        $(target).replaceWith('<input type="text" value="' + value + '" name="name"/>');
+        $(target).replaceWith('<input type="text" value="' + value + '" name="name" class="guest-name"/>');
     });
+}
+
+function get_names() {
+    var guests = $(".guest-name");
+    var names = [];
+
+    for(var i = 0; i < guests.length; i++) {
+        if(guests[i].tagName === "INPUT") {
+            names.push(guests[i].value);
+        } else {
+            names.push($(guests[i]).text());
+        }
+    }
+
+    return names;
 }
 
 // bind to the submit event of our form
@@ -69,15 +84,24 @@ function bind_submit() {
         }
 
         var $form = $(this);
-        var $inputs = $form.find("input, select, button, textarea");
+        var $inputs = $form.find("select, button, textarea");
         var serializedData = $form.serializeArray();
         var submitData = {};
         var critterCount = 0;
+        var names = null;
 
         // let's disable the inputs for the duration of the ajax request
         $inputs.prop("disabled", true);
 
         // parse serializedData
+
+        names = get_names();
+
+        submitData["names[]"] = [];
+        for(var i = 0; i < names.length; i++) {
+            submitData["names[]"].push(names[i]);
+        }
+
         for(var i = 0; i < serializedData.length; i++) {
             var name = serializedData[i].name;
             var value = serializedData[i].value;
