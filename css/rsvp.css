@@ -24,3 +24,7 @@ input.notice {
 .small-link {
     text-decoration: underline;
 }
+
+.pure-form label.guest-name{
+    color: black;
+}

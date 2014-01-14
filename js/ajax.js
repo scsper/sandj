@@ -4,6 +4,16 @@ var request;
 function bind() {
     bind_retrieval();
     bind_submit();
+    bind_label();
+}
+
+function bind_label() {
+    $(".guest-name").click(function(event) {
+        var target = event.target;
+        var value = $(target).text();
+
+        $(target).replaceWith('<input type="text" value="' + value + '" name="name"/>');
+    });
 }
 
 // bind to the submit event of our form

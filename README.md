@@ -55,6 +55,9 @@ sandj
 
 # To do
 * +1 flow
+    * verify RSVP submission form on client side
+    * Protect against SQL injection
+    * Update database with new name
 * write story
 * test if someone resets their rsvp/food
 * change critter colors
