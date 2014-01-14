@@ -150,8 +150,9 @@ class Guest {
         }
     }
 
-    public function update($id, $rsvp, $food) {
-        $sql = "UPDATE guest SET rsvp_id=" . $rsvp . ", food_id=" . $food . " WHERE id=" . $id;
+    public function update($id, $rsvp, $food, $name) {
+        $name = mysql_real_escape_string($name);
+        $sql = "UPDATE guest SET rsvp_id=" . $rsvp . ", food_id=" . $food . ", name='" . $name . "' WHERE id=" . $id;
         $result = mysql_query($sql);
 
         if (!$result) {

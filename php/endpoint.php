@@ -20,6 +20,7 @@ class Endpoint {
             $food = $_POST['food'];
             $id = $_POST['id'];
             $family = $_POST['family'];
+            $names = $_POST['names'];
 
             $guestHtml = "";
 
@@ -28,7 +29,7 @@ class Endpoint {
 
             for($i = 0; $i < count($id); $i++) {
                 $guest = new Guest();
-                $guestHtml .= $guest->update($id[$i], $rsvp[$i], $food[$i]);
+                $guestHtml .= $guest->update($id[$i], $rsvp[$i], $food[$i], $names[$i]);
 
                 if($rsvp[$i]) {
                     $yes = true;
@@ -56,7 +57,7 @@ class Endpoint {
             }
 
             $closeHtml = '</tbody>
-            </table><small class="small-spacing">Click <a class="small-link" href="rsvp.html">here</a> if you need to make changes.';
+            </table><small class="small-spacing">Click <a class="small-link" href="index.html">here</a> if you need to make changes.';
 
             echo $message . $baseHtml . $guestHtml  . $closeHtml;
 
