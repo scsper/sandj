@@ -16,8 +16,7 @@ class Guest {
     }
 
     public function display() {
-        $html = '
-        <label style="color: black;">' . $this->name . '</label>';
+        $html = $this->display_name();
 
         $rsvpStr = '
         <select name="rsvp[]">
@@ -27,11 +26,11 @@ class Guest {
         </select>';
 
         $foodStr = '<select name="food[]">
-          <option value = "0">What are you eating?</option>
-          <option value = "1">Beef</option>
-          <option value = "2">Chicken</option>
-          <option value = "3">Fish</option>
-          <option value = "4">Vegetarian</option>
+          <option value = "4">What are you eating?</option>
+          <option value = "0">Beef</option>
+          <option value = "1">Chicken</option>
+          <option value = "2">Fish</option>
+          <option value = "3">Vegetarian</option>
         </select>';
 
         $rsvpStr = $this->replace_string($rsvpStr, "rsvp");
@@ -66,12 +65,21 @@ class Guest {
                 </tr>";
     }
 
+    private function display_name() {
+        $NO_NAME = 3;
+        if($this->rsvp == $NO_NAME) {
+            return '<input type="text" placeholder="Name of your +1..." name="name"/>';
+        } else {
+            return '<label style="color: black;">' . $this->name . '</label>';
+        }
+    }
+
     private function display_food() {
-        $NOT_SELECTED = 0;
-        $BEEF = 1;
-        $CHICKEN = 2;
-        $FISH = 3;
-        $VEGETARIAN = 4;
+        $NOT_SELECTED = 4;
+        $BEEF = 0;
+        $CHICKEN = 1;
+        $FISH = 2;
+        $VEGETARIAN = 3;
 
         if( $this->foodId == $NOT_SELECTED ) {
             return "Not selected";
