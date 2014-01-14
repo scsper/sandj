@@ -1,14 +1,14 @@
 <style>
 
-html { 
+html {
 	height: 100%
 }
 
-body { 
+body {
 /*		background: #eee ;*/
 	height: 100%;
 	margin: 0;
-	padding: 0 
+	padding: 0
 }
 
 #map-canvas {
@@ -61,6 +61,10 @@ legend:first-of-type {
 img.section{
 	height:15%;
 	margin: 1em auto -5em;
+}
+
+.detail-header {
+	margin-top: 30px;
 }
 
 </style>

@@ -59,8 +59,6 @@ sandj
     * Protect against SQL injection
 * write story
 * test if someone resets their rsvp/food
-* change critter colors
 * Font for Details page
-* Links to registries
 * Display all attendees for Jess & I
 
