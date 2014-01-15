@@ -54,11 +54,7 @@ sandj
 
 
 # To do
-* +1 flow
-    * Verify RSVP submission form on client side
-    * Protect against SQL injection
 * write story
-* test if someone resets their rsvp/food
 * Font for Details page
-* Display all attendees for Jess & I
+* Categorize all attendees for Jess and I
 

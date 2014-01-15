@@ -42,7 +42,7 @@ class Family {
     }
 
     public function display_error() {
-        $error = "<h4 style='color:red;'>We're sorry, but that code does not exist in our database</h2>";
+        $error = "<h4 class='error'>We're sorry, but that code does not exist in our database</h4>";
         $html = '<form id="retrieve-guests" name="rsvp-form" class="rsvp-form pure-form" onsubmit="rsvpsubmit(); return false;" method="get">
                 <fieldset>
                     <legend class = "centered"> RSVP </legend>' . $error . '
