@@ -1,3 +1,9 @@
+body {
+/*      background: #eee ;*/
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+}
+
 .header .pure-menu {
     padding: .5em;
 }

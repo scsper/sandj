@@ -6,6 +6,8 @@ html {
 
 body {
 /*		background: #eee ;*/
+	font-family: 'Poiret One', cursive;
+	font-weight: bold;
 	height: 100%;
 	margin: 0;
 	padding: 0
@@ -18,6 +20,7 @@ body {
 	min-width: 200px;
 	max-height: 600px;
 	max-width: 500px;
+	margin-bottom: 2em;
 }
 
 form {
@@ -34,14 +37,29 @@ input.submit, .when{
 	margin:0 auto;
 }
 
+.where.detail, .gifts.detail {
+	margin: 2em auto;
+	font-size:.96em;
+}
+
 .detail {
-	line-height:1.5em;
+	line-height:1.4em;
 	clear:right;
 	display:relative;
 	max-width: 800px;
 	padding: .5em;
 	margin:1em auto;
 }
+
+.where div {
+	margin-bottom: 2em;
+}
+
+.right-border {
+	margin: auto -5px;
+	border-right:thin solid #e5e5e5;
+}
+
 legend{
 	line-height: 2em;
 	letter-spacing: .8px;
@@ -64,7 +82,13 @@ img.section{
 }
 
 .detail-header {
+	font-size :150%;
 	margin-top: 30px;
+}
+
+.bold {
+	font-size:1.2em;
+	font-weight: bolder;
 }
 
 </style>
