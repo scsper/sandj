@@ -118,6 +118,16 @@ function bind_submit() {
             submitData[name].push(value);
         }
 
+        for(var i = 0; i < submitData["rsvp[]"].length; i++) {
+            var data = submitData;
+            if(!validate_submit(data["names[]"][i], data["food[]"][i], data["rsvp[]"][i])) {
+                console.log("ERROR!");
+                $inputs.prop("disabled", false); // reenable the inputs
+
+                return false;
+            }
+        }
+
         // fire off the request to /form.php
         request = $.ajax({
             url: "/php/endpoint.php",
@@ -154,6 +164,38 @@ function bind_submit() {
 
         event.preventDefault();  // prevent default posting of form
     });
+}
+
+function validate_submit(name, food, rsvp) {
+    return validate_name(name) && validate_food(food) && validate_rsvp(rsvp);
+}
+
+function validate_name(name) {
+    if(name.length == 0) {
+        return false;
+    }
+
+    if(name.match("_")) {
+        return false;
+    }
+
+    return true;
+}
+
+function validate_food(food) {
+    if(parseInt(food) === 4) {
+        return false;
+    }
+
+    return true;
+}
+
+function validate_rsvp(rsvp) {
+    if(parseInt(rsvp) > 1) {
+        return false;
+    }
+
+    return true;
 }
 
 bind();
