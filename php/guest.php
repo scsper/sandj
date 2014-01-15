@@ -142,7 +142,12 @@ class Guest {
     }
 
     public function add() {
-        $sql = "INSERT INTO guest (name, rsvp_id, food_id, family_id, code) VALUES (\"" . $this->name . "\", " . $this->rsvp . ", 4, " . $this->familyId . ", \"" . $this->code . "\")";
+        $name = mysql_real_escape_string($this->name);
+        $rsvp = mysql_real_escape_string($this->rsvp);
+        $familyId = mysql_real_escape_string($this->familyId);
+        $code = mysql_real_escape_string($this->code);
+
+        $sql = "INSERT INTO guest (name, rsvp_id, food_id, family_id, code) VALUES (\"" . $name . "\", " . $rsvp . ", 4, " . $familyId . ", \"" . $code . "\")";
         $result = mysql_query($sql);
 
         if (!$result) {
@@ -152,7 +157,7 @@ class Guest {
 
     public function update($id, $rsvp, $food, $name) {
         $name = mysql_real_escape_string($name);
-        $sql = "UPDATE guest SET rsvp_id=" . $rsvp . ", food_id=" . $food . ", name='" . $name . "' WHERE id=" . $id;
+        $sql = "UPDATE guest SET rsvp_id=" . mysql_real_escape_string($rsvp) . ", food_id=" . mysql_real_escape_string($food) . ", name='" . $name . "' WHERE id=" . mysql_real_escape_string($id);
         $result = mysql_query($sql);
 
         if (!$result) {
