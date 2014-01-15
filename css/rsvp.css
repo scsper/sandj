@@ -28,3 +28,7 @@ input.notice {
 .pure-form label.guest-name{
     color: black;
 }
+
+.error {
+    color: red;
+}

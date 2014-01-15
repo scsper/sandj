@@ -1,5 +1,8 @@
 // variable to hold request
 var request;
+var errorMessage,
+    errorOpen = '<h4 class="error">',
+    errorClose = '</h4>';
 
 function bind() {
     bind_retrieval();
@@ -33,6 +36,7 @@ function get_names() {
 
 // bind to the submit event of our form
 function bind_retrieval() {
+    errorMessage = null;
     $("#retrieve-guests").submit(function(event){
         // abort any pending request
         if (request) {
@@ -77,6 +81,7 @@ function bind_retrieval() {
 }
 
 function bind_submit() {
+    errorMessage = null;
     $("#submit-rsvp").submit(function(event){
         // abort any pending request
         if (request) {
@@ -121,7 +126,13 @@ function bind_submit() {
         for(var i = 0; i < submitData["rsvp[]"].length; i++) {
             var data = submitData;
             if(!validate_submit(data["names[]"][i], data["food[]"][i], data["rsvp[]"][i])) {
-                console.log("ERROR!");
+                var error = errorOpen + errorMessage + errorClose;
+
+                if($(".error").length) { // check to see if error exists
+                    $(".error").replaceWith(error);
+                } else {
+                    $("legend").after(error);
+                }
                 $inputs.prop("disabled", false); // reenable the inputs
 
                 return false;
@@ -172,10 +183,12 @@ function validate_submit(name, food, rsvp) {
 
 function validate_name(name) {
     if(name.length == 0) {
+        errorMessage = 'You must fill out a name.';
         return false;
     }
 
     if(name.match("_")) {
+        errorMessage = 'You must enter a valid name.  Valid names do not contain underscores.';
         return false;
     }
 
@@ -184,6 +197,8 @@ function validate_name(name) {
 
 function validate_food(food) {
     if(parseInt(food) === 4) {
+        errorMessage = 'You must enter a food choice.';
+
         return false;
     }
 
@@ -192,6 +207,7 @@ function validate_food(food) {
 
 function validate_rsvp(rsvp) {
     if(parseInt(rsvp) > 1) {
+        errorMessage = 'You must enter whether you are coming or not.';
         return false;
     }
 
