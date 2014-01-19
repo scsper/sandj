@@ -7,3 +7,26 @@ The crucial element of the relationship's success is each person's love for Jesu
 We look forward to this new season of life, and we thank you for being a part of our lives.  Hopefully, you will continue to be a part of it in the future :)
 
 
+#### Proposal
+
+Jessica knew that a proposal was coming very soon.  I knew that she would suspect a proposal for anything extravagant or out-of-the-ordinary that I did.  So, I decided to disguise it by proposing to her on her birthday weekend.
+
+We both really like puzzles.  It's at the core of what we do for work, and many of our leisure activities (playing games and doing crosswords, to name a couple) contain them as well.  So, I (Scott) decided to make a giant puzzle for Jessica to solve.
+
+The day started with me taking her to brunch at Pasti's, a restaurant in Palo Alto.  Getting brunch, especially at a place we haven't been before, is one of our favorite activities.  At brunch, I revealed that Mr. Piffles (her stuffed penguin) (((insert picture))) had a letter for her.  It was a request to help him find Mrs. Piffles!
+
+Each clue involved multiple parts: a place to find, a person to contact, and an object to photograph.  This quest to find Mrs. Piffles took us all around the South Bay, including an art shop, a cafe, a shopping mall, and a friend's house.  Finally, all of the objects photographed could be interpreted as letters which spelled "PARK," the location of the missing penguin!
+
+At the park, Micah, Clayton, and Missy (Jessica's high school friends) had set up a picnic blanket with roses, apple cider, and the missing penguin under a tree where Jessica and I had a picnic.  As we walked into the park, Jessica was dismayed that "someone had taken our spot!"  Undeterred, I coolly (or so I thought) suggested that we should walk in the grass which just happened to cross paths with the rose-covered picnic blanket.  We sat under the tree, and I gave her a letter to read.  As she finished the letter, I got down on one knee and asked her to marry me.  She said yes!  Afterwards, Jessica's friends came and tackled her, and we rejoiced.
+
+
+Special thanks to:
+
+* Philemon Chan
+* Addison and Yvonne Luh
+* Sylvia Do
+* Micah Nacita
+* Clayton Chancey
+* Missy Camp
+* Christopher Chois
+* who else?
