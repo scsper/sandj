@@ -17,6 +17,8 @@
    list-style:none;
    margin:200px -50px 0;
    padding:15px 30px;
+   -ms-user-select:none;
+   -moz-user-select:none;
    -webkit-user-select:none;
 }
 
@@ -37,31 +39,36 @@ figure {
 
     li:nth-child(6n+1) figure,  li:nth-child(6n+1) .shadow { 
         animation-delay:-3s; 
+        -moz-animation-delay:-3s; 
         -webkit-animation-delay:-3s; 
     }
     li:nth-child(6n+2) figure,li:nth-child(6n+2) .shadow { 
         animation-delay:-1s; 
+        -moz-animation-delay:-1s; 
         -webkit-animation-delay:-1s; 
     }
     li:nth-child(6n+3) figure, li:nth-child(6n+3) .shadow { 
         animation-delay:-4s;
+        -moz-animation-delay:-4s; 
         -webkit-animation-delay:-4s; 
     }
     li:nth-child(6n+4) figure, li:nth-child(6n+4) .shadow { 
         animation-delay:-.2.5s;
+        -moz-animation-delay:-.2.5s; 
         -webkit-animation-delay:-.2.5s;
     }   
     li:nth-child(6n+5) figure, li:nth-child(6n+5) .shadow { 
         animation-delay:-2.5s;
+        -moz-animation-delay:-2.5s; 
         -webkit-animation-delay:-2.5s;
     }   
     
     li:hover figure { padding:30px 40px; }
-    li:hover .click-anim {-webkit-transform:translateY(-6px); }
+    li:hover .click-anim {-webkit-transform:translateY(-6px); -moz-transform:translateY(-6px); }
     
     
-   .click-anim { transition:.3s cubic-bezier(.15,.60,.30,1.9); -webkit-transform-origin:center bottom; }
-        li:active .click-anim {-webkit-transform:scale(1.1);  } 
+   .click-anim { transition:.3s cubic-bezier(.15,.60,.30,1.9); -webkit-transform-origin:center bottom; -moz-transform-origin:center bottom;}
+        li:active .click-anim {-webkit-transform:scale(1.1);  -moz-transform:scale(1.1); } 
 
 
 
@@ -104,16 +111,20 @@ figure {
     }
     :not(.wink)>.eye{
         animation:blink 1s ease-in-out infinite;
+        -moz-animation:blink 1s ease-in-out infinite;
         -webkit-animation:blink 1s ease-in-out infinite;
     }
     @keyframes blink { 90% {-webkit-transform:none; } 95% {-webkit-transform:rotateX(90deg); } }
+    @-moz-keyframes blink { 90% {-moz-transform:none; } 95% {-moz-transform:rotateX(90deg); } }
     @-webkit-keyframes blink { 90% {-webkit-transform:none; } 95% {-webkit-transform:rotateX(90deg); } }
     
     .wink .eye:nth-child(2){
         animation:wink 2s ease-in-out infinite;
+        -moz-animation:wink 2s ease-in-out infinite;
         -webkit-animation:wink 2s ease-in-out infinite;
     }
     @keyframes wink { 90% {-webkit-transform:none;  } 95% {-webkit-transform:rotateX(90deg); } }
+    @-moz-keyframes wink { 90% {-moz-transform:none;  } 95% {-moz-transform:rotateX(90deg); } }
     @-webkit-keyframes wink { 90% {-webkit-transform:none; } 95% {-webkit-transform:rotateX(90deg); } }
 
 /* soulpatch =================================================== */    
@@ -214,12 +225,18 @@ figure {
 
     figure.hyper { 
         animation:hyper 2s infinite; 
+        -moz-animation:hyper 2s infinite; 
         -webkit-animation:hyper 2s infinite; 
     }
         @keyframes hyper {
             25%{-webkit-transform:translateY(-20px); }
             15%,50%{-webkit-transform:rotateX(20deg); }
             75%{-webkit-transform:none; }
+        }
+        @-moz-keyframes hyper {
+            25%{-moz-transform:translateY(-20px); }
+            15%,50%{-moz-transform:rotateX(20deg); }
+            75%{-moz-transform:none; }
         }
         @-webkit-keyframes hyper {
             25%{-webkit-transform:translateY(-20px); }
