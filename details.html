@@ -17,6 +17,7 @@
                         <li><a href="story.html">Story</a></li>
                         <li><a href="details.html">Details</a></li>
                         <li><a href="index.html">RSVP</a></li>
+                        <li><a href="photos.html">PHOTOS</a></li>
                     </ul>
                 </div>
             </div>
@@ -38,15 +39,8 @@
             <div class = "pure-u-1-2">
                 <p class="centered bold">Reception </p>
                 <p class="centered">Five Crowns Restaurant</p>
-                <p class="centered">3801 E. Coast Highway Corona del Mar, CA 92625</p>
-            </div>
-
-            <form class ="pure-form pure-form-stacked pure-u-1-5" name="direction-form" onsubmit= "calcRoute(); return false;" method="get">
-                <label for="origin">Start From:</label>
-                <input id="origin pure-input-1" type = "text" name="origin" placeholder="Origin">
-                <input class=" submit pure-button " type="submit" value ="Get Directions">
-            </form>
-      		<div id="map-canvas" class="pure-u-2-3"></div>
+                <p class="centered">3801 E. Coast Hwy Corona del Mar, CA 92625</p>
+            </div>       
         </div>
 
 <!-- GIFTS -->
@@ -59,16 +53,11 @@
 
 <!-- HOTELS -->
         <legend class = "centered detail-header">HOTELS</legend><!--         <p class="section pure-skin-green"> Gifts </p> -->
-        <div class="gifts detail pure-u-1 pure-skin-green centered">
+        <div class="hotel detail pure-u-1 pure-skin-green centered">
             <p>If you're travelling from out of town, we will have a hotel with a group rate.  Please check back later or get in contact with us.</p>
         </div>
     </div>
 </body>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLcdQOs-z8LYwdL5oGxsWZuSv3sXBtDQg&sensor=false"></script>
     <script src="js/details.js"></script>
-    <script>
-     	var m = new Map();
-        m.init();
-        m.initDirector();
-    </script>
 </html>

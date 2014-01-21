@@ -14,6 +14,7 @@ Map.prototype = {
 	initDirector : function(){
 		this.directionsDisplay = new google.maps.DirectionsRenderer();
 		this.directionsDisplay.setMap(this.map);
+		this.directionsDisplay.setPanel(document.getElementById('directions-panel'));
 	},
 	calcRoute : function(origin1){
 		var start = origin1;
@@ -26,10 +27,10 @@ Map.prototype = {
 		var directionsDisplay = this.directionsDisplay;
 		this.directionService.route(request, function(result, status){
 			if (status == google.maps.DirectionsStatus.OK) {
-				document.getElementById("map-canvas").style.width = "500px";
-				document.getElementById("map-canvas").style.height = "500px";
+				// document.getElementById("map-canvas").style.width = "400px";
+				// document.getElementById("map-canvas").style.height = "500px";
      			directionsDisplay.setDirections(result);
-     			console.log(result.routes[0].legs[0].duration);
+     			// console.log(result.routes[0].legs[0].duration);
      			return false;
     		}
 		});
@@ -39,5 +40,3 @@ Map.prototype = {
 function calcRoute(e){
 	m.calcRoute(document.forms["direction-form"]["origin"].value);
 }
-
-

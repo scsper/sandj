@@ -12,22 +12,7 @@ body {
 	margin: 0;
 	padding: 0
 }
-
-#map-canvas {
-	float:right;
-	clear:right;
-	min-height: 200px;
-	min-width: 200px;
-	max-height: 600px;
-	max-width: 500px;
-	margin-bottom: 2em;
-}
-
-form {
-	float:left;
-	margin: auto .5em;
-    padding: .5em;
-}
+,
 input.submit, .when{
 	margin: .5em 0;
 	padding: .5em;
@@ -37,9 +22,13 @@ input.submit, .when{
 	margin:0 auto;
 }
 
-.where.detail, .gifts.detail {
+.where.detail, .gifts.detail, .hotel.detail {
 	margin: 2em auto;
 	font-size:.96em;
+}
+
+.hotel.detail{
+	padding-bottom: 300px;
 }
 
 .detail {
@@ -47,7 +36,6 @@ input.submit, .when{
 	clear:right;
 	display:relative;
 	max-width: 800px;
-	padding: .5em;
 	margin:1em auto;
 }
 
@@ -64,7 +52,7 @@ legend{
 	line-height: 2em;
 	letter-spacing: .8px;
 	width:100%;
-	font-size:125%;
+	font-size:1.25em;
 	color:#333;
 	display:block;
 	margin: 0 auto;
@@ -82,7 +70,7 @@ img.section{
 }
 
 .detail-header {
-	font-size :150%;
+	font-size :1.5em;
 	margin-top: 30px;
 }
 

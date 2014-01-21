@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Story!</title>
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.0/pure-min.css">
+        <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/photos.css">
+        <link rel="stylesheet" href="css/splash.css">
+        <script src="http://yui.yahooapis.com/3.10.3/build/yui/yui-min.js"></script>
+    </head>
+
+    <body>
+        <div class="content pure-g-r">
+            <div class="header pure-u-1">
+                <div class="pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
+                    <a href="#" class="pure-menu-heading">SCOTT AND JESS</a>
+                    <ul>
+                        <li><a href="story.html">Story</a></li>
+                        <li><a href="details.html">Details</a></li>
+                        <li><a href="index.html">RSVP</a></li>
+                        <li><a href="photos.html">PHOTOS</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="main splash pure-u-1">
+                 <div class="pure-g-r centered-image">
+                    <div id = "pictures" class=" pure-u-1">
+                   </div>
+                    <p class="pure-u-1"> Thanks to Bobby Brown for taking our engagement pictures!</p>
+                    <a class="pure-u-1" href="http://www.bobbybrownphotography.com/"> www.bobbybrownphotography.com</a>
+                </div>
+            </div>
+        </div>
+    </body>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>
+            function myFunction()
+            {
+                var begString = "<div class='1 box splash-image'><img src='assets/pic";
+                var endString = ".jpg'></img></div>";
+                var htmlToInsert = "";
+                for(var i =1; i < 19 ; i = i+1){
+                    htmlToInsert = htmlToInsert + begString + i + endString;
+                }
+                $("#pictures").after(htmlToInsert);
+            };
+
+            myFunction();
+        </script>
+</html>

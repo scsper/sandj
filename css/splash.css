@@ -2,6 +2,9 @@
     padding: 1em;
 }
 
+.image-div {
+    width:30%;
+}
 .splash .splash-subhead {
     color: #999;
     font-weight: 300;
