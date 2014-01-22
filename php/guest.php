@@ -60,6 +60,7 @@ class Guest {
     public function display_update() {
         return "<tr>
                   <td>" . $this->name . "</td>
+                  <td>" . $this->code . "</td>
                   <td>" . $this->display_rsvp() . "</td>
                   <td>" . $this->display_food() . "</td>
                 </tr>";
@@ -138,6 +139,7 @@ class Guest {
             $this->familyId = $guest['family_id'];
             $this->foodId = $guest['food_id'];
             $this->id = $guest['id'];
+            $this->code = $guest['code'];
         }
     }
 

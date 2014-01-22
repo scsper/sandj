@@ -12,6 +12,7 @@ class Roster {
         echo '<table class="pure-table-striped pure-table pure-table-horizontal">';
         echo '<tr>';
         echo '<th>Name</th>';
+        echo '<th>Code</th>';
         echo '<th>Food</th>';
         echo '<th>Status</th>';
         echo '</tr>';
