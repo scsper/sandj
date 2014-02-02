@@ -18,7 +18,7 @@ input.submit, .when{
 	padding: .5em;
 }
 
-.when.detail {
+.when.detail, .hotel-table {
 	margin:0 auto;
 }
 
@@ -27,8 +27,11 @@ input.submit, .when{
 	font-size:.96em;
 }
 
-.hotel.detail{
+.explore.detail{
 	padding-bottom: 300px;
+}
+.explore li {
+	list-style: none;
 }
 
 .detail {
