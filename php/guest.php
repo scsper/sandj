@@ -60,7 +60,6 @@ class Guest {
     public function display_update() {
         return "<tr>
                   <td>" . $this->name . "</td>
-                  <td>" . $this->code . "</td>
                   <td>" . $this->display_rsvp() . "</td>
                   <td>" . $this->display_food() . "</td>
                 </tr>";
@@ -73,6 +72,14 @@ class Guest {
         } else {
             return '<label class="guest-name">' . $this->name . '</label>';
         }
+    }
+
+    public function get_food() {
+        return $this->foodId;
+    }
+
+    public function get_rsvp() {
+        return $this->rsvp;
     }
 
     private function display_food() {
